@@ -11,4 +11,8 @@
 |
 */
 
-Route::get('/api/vehiculos', 'VehiculoController@index');
+
+Route::group(['middleware' => ['cors']], function () {
+    //Rutas a las que se permitirá acceso
+    Route::get('/api/vehiculos', 'VehiculoController@index');
+});
