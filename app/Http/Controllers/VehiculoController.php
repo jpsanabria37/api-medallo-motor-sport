@@ -15,6 +15,9 @@ class VehiculoController extends Controller
         $data = array(
             "status" => "success",
             "code" => "200",
+            "headers" => [
+                "Access-Control-Allow-Origin" => "*"
+            ],
             "data" => $vehiculo
         );
 
